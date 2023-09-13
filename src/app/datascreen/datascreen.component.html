@@ -1,0 +1,27 @@
+<h2 class="text-center text-decoration-underline py-5">Stella Emoloyes</h2>
+<div class="container">
+    <table class="table table-striped   ">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Experience</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let value of datalist ">
+                <th scope="row">{{value.id}}</th>
+                <td>{{value.name}}</td>
+                <td>{{value.Designation}}</td>
+                <td>{{value.Experience}} </td>
+                <td colspan="1">
+                    <button class="btn btn-primary mx-2" (click)="editdata(value.id)">Edit</button>
+                    <button class="btn btn-primary mx-2" (click)="deletrow(value.id)">Delet</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

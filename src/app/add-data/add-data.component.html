@@ -1,0 +1,41 @@
+<button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <img class="dis" src='../../assets/green-add-button-12023.png' width="50" />
+</button>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Add Recoard</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form #employData="ngForm" (ngSubmit)="addNewData(employData)">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name" name="name" ngModel #name="ngModel"
+                            required>
+                        <p class="alert alert-danger" *ngIf="name.touched && name.invalid">invalid Name</p>
+                    </div>
+                    <pre></pre>
+                    <div class=" form-group">
+                        <input type="text" class="form-control" placeholder="Designation" name="Designation" ngModel
+                            #Designation="ngModel" required>
+                        <p class="alert alert-danger" *ngIf="Designation.touched && Designation.invalid">invalid
+                            Designation
+                        </p>
+                    </div>
+                    <pre></pre>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Experience" name="Experience" ngModel
+                            #Experience="ngModel" required>
+                        <p class="alert alert-danger" *ngIf="Experience.touched && Experience.invalid">invalid
+                            Experience</p>
+                    </div>
+                    <pre></pre>
+                    <button type="reset" class="btn btn-primary mx-1">reset</button>
+                    <button type="submit" class="btn btn-primary mx-1">Save data</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
